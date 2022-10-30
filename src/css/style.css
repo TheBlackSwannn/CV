@@ -427,17 +427,24 @@ nav ul li.active a {
 }
 
 .timeline {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	height: fit-content;
+	width: 50%;
+}
+
+.timeline h4 {
+	display: inline-block;
+	margin-bottom: 30px;
+	font-weight: bold;
+	font-size: 1rem;
 }
 
 .timeline .item {
 	position: relative;
     padding: 0 30px 60px 30px;
+	font-size: 15px;
 }
 
-.timeline .item::before {
+.timeline .item-active::before {
 	content: '';
     position: absolute;
     left: 0;
@@ -449,13 +456,25 @@ nav ul li.active a {
 
 .timeline .item .date {
     border: 1px solid #f26b38;
+	display: inline-block;
+	position: relative;
+	top: -10px;
+	padding: 3px 8px;
 }
 .timeline .item .date::before {
 	content: '';
     width: 30px;
     height: 1px;
     position: absolute;
-    left: 0px;
+    left: -30px;
     top: 9px;
     background: #f26b38;
+}
+
+.item .subject {
+	font-weight: bold;
+}
+
+.item p {
+	text-align: justify;
 }
